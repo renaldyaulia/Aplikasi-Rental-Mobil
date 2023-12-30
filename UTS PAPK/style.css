@@ -1,0 +1,127 @@
+body {
+  font-family: Arial, sans-serif;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #2720eb;
+}
+header {
+  background-color: rgb(51, 51, 51);
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+section {
+  display: flex;
+  justify-content: space-around;
+  padding: 2em;
+}
+
+.car {
+  text-align: center;
+  max-width: 300px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#booking-form {
+  max-width: 400px;
+  margin: 2em auto;
+  padding: 1em;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+.hidden {
+  display: none;
+}
+#splash-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #3498db; /* Warna latar belakang splash screen */
+  color: #fff; /* Warna teks splash screen */
+}
+
+#splash-screen img {
+  width: 100px; /* Ukuran ikon splash screen */
+  height: 100px;
+}
+
+img {
+  width: 100px; /* Ukuran ikon splash screen */
+  height: 100px;
+}
+.car-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Tambahkan gaya untuk artikel mobil */
+.car-article {
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+@media print {
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    text-align: center;
+    color: #2720eb;
+  }
+
+  section {
+    margin: 0 auto;
+    width: 80%;
+  }
+  h2,
+  p,
+  img,
+  .car-container,
+  .car-article,
+  #splash-screen {
+    display: none; /* Sembunyikan elemen yang tidak ingin dicetak */
+  }
+
+  /* Gaya untuk tabel pesanan di tampilan cetak */
+  #orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2em auto;
+  }
+
+  #orders-table th,
+  #orders-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+  /* Gaya untuk total pembayaran di tampilan cetak */
+  #total-amount {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+}

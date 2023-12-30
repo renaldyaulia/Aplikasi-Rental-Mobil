@@ -1,0 +1,24 @@
+{
+"name": "Rennt Car",
+"short_name": "Rental Mobil",
+"theme_color": "#fff",
+"background_color": "#fff",
+"display": "standalone",
+"orientation": "portrait",
+"scope": "/",
+"start_url": "/index.html",
+"icons": [
+  {
+    "purpose": "maskable",
+    "src": "icon.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  },
+  {
+    "purpose": "any",
+    "src": "icon.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }
+]
+}

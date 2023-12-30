@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <title>Aplikasi Rental Mobil Sederhana</title>
+  </head>
+  <body>
+    <div id="splash-screen">
+      <img src="splash-icon.png" alt="Splash Icon" />
+      <p>Loading...</p>
+    </div>
+    <h1>Rennt Car App</h1>
+    <fieldset id="rentalForm">
+      <legend>Input Form</legend>
+      <label for="type">Pilih Jenis Mobil:</label>
+      <select id="type" name="type">
+        <option value="Avanza">Avanza</option>
+        <option value="Xenia">Xenia</option>
+        <option value="Terios">Terios</option>
+      </select>
+      <label for="type">Berapa hari</label>
+      <input type="number" id="hari" name="hari" />
+      <button type="button" onclick="addOrder()">Tambah Pesanan</button>
+    </fieldset>
+    <br />
+    <table id="orders-table"></table>
+
+    <br />
+    <div id="payment-details">
+      <fieldset>
+        <legend>Detail Pembayaran</legend>
+        <label for="payment-method">Metode Pembayaran:</label>
+        <select id="payment-method" name="payment-method">
+          <option value="cash">Tunai</option>
+          <option value="transfer">Transfer</option>
+        </select>
+        <label for="payment-amount">Jumlah Pembayaran:</label>
+        <input type="number" id="payment-amount" name="payment-amount" />
+
+        <button type="button" onclick="calculatePayment()">
+          Hitung Pembayaran
+        </button>
+
+        <div id="payment-result"></div>
+      </fieldset>
+      <br />
+      <button id="print-button" onclick="printReceipt()">Print</button>
+      <br />
+    </div>
+    <br />
+    <div class="car-container">
+      <img src="img/avanza.png" alt="Avanza" />
+      <br />
+      <p>Avanza 150rb / hari lebih dari 3 hari gratis 1 hari</p>
+    </div>
+    <br />
+    <div class="car-container">
+      <img src="img/xenia.png" alt="Xenia" />
+      <br />
+      <p>Xenia 200rb / hari lebih dari 4 hari gratis 2 hari</p>
+    </div>
+    <br />
+    <div class="car-container">
+      <img src="img/terios.png" alt="Terios" />
+      <br />
+      <p>Terios 250rb / hari lebih dari 5 hari gratis 3 hari</p>
+    </div>
+    <br />
+
+    <div id="rental-articles">
+      <h2>Mobil yang Telah Di-Rental</h2>
+      <p>
+        Selamat datang di Rennt Car tempat penyewaan mobil sederhana. Kami menyediakan
+        berbagai jenis mobil untuk kebutuhan Anda. Berikut adalah beberapa mobil
+        populer yang telah di-rental oleh pelanggan kami:
+      </p>
+
+      <div class="car-article">
+        <h3>Avanza</h3>
+        <p>
+          Avanza adalah pilihan yang sangat populer di kalangan pelanggan kami.
+          Dengan kenyamanan dan performa yang handal, Avanza menjadi pilihan
+          utama untuk perjalanan harian.
+        </p>
+      </div>
+
+      <div class="car-article">
+        <h3>Xenia</h3>
+        <p>
+          Xenia merupakan mobil yang memiliki jenis Multifunction Purpose Vehicle (MVP). Yang dimana jenis mobil ini dirancang khusus untuk digunakan dalam berbagai situasi dan keperluan.
+        </p>
+      </div>
+
+      <div class="car-article">
+        <h3>Terios</h3>
+        <p>
+          Terios adalah mobil bertipe SUV mini. Yang dimana SUV merupakan Sport Utility Vehicle atau kendaraan utilitas sport. Mobil ini cocok digunakan bagi orang-orang yang ingin berpergian secara santai.
+        </p>
+      </div>
+
+      <p>
+        Terima kasih telah memilih layanan rental mobil kami. Jangan ragu untuk
+        menghubungi kami untuk informasi lebih lanjut atau untuk melakukan
+        pemesanan.
+      </p>
+    </div>
+
+    *Harga Tidak Sesuai dengan yang sebenarnya
+
+    <script>
+      if (navigator.serviceWorker) {
+        navigator.serviceWorker.register("service-worker.js", { scope: "/" });
+      }
+    </script>
+    <script src="script.js"></script>
+    <script src="register.js"></script>
+  </body>
+</html>
